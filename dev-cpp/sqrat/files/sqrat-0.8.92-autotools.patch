@@ -1,0 +1,35 @@
+--- /dev/null	2013-09-14 08:29:58.845935642 +0900
++++ Makefile.am	2013-09-16 00:00:18.980000000 +0900
+@@ -0,0 +1,20 @@
++include_HEADERS = include/sqrat.h
++
++sqratheadersdir = $(includedir)/sqrat
++
++sqratheaders_HEADERS = include/sqrat/sqratAllocator.h \
++	include/sqrat/sqratArray.h \
++	include/sqrat/sqratClass.h \
++	include/sqrat/sqratClassType.h \
++	include/sqrat/sqratConst.h \
++	include/sqrat/sqratFunction.h \
++	include/sqrat/sqratGlobalMethods.h \
++	include/sqrat/sqratMemberMethods.h \
++	include/sqrat/sqratObject.h \
++	include/sqrat/sqratOverloadMethods.h \
++	include/sqrat/sqratScript.h \
++	include/sqrat/sqratTable.h \
++	include/sqrat/sqratTypes.h \
++	include/sqrat/sqratUtil.h \
++	include/sqrat/sqratVM.h \
++	include/sqrat/sqratext_Ref.h
+--- /dev/null	2013-09-14 08:29:58.845935642 +0900
++++ configure.ac	2013-09-15 23:50:12.730000000 +0900
+@@ -0,0 +1,9 @@
++#AC_PREREQ([2.69])
++AC_INIT([sqrat], [0.8.92], [http://scrat.sourceforge.net/])
++AM_INIT_AUTOMAKE
++
++AC_CHECK_HEADERS([squirrel.h])
++
++AC_CONFIG_FILES([Makefile])
++
++AC_OUTPUT
